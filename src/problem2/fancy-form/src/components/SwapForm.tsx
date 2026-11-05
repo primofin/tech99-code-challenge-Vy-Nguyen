@@ -126,7 +126,7 @@ export default function SwapForm() {
           </div>
         )}
 
-        <button type="submit" className="swap-button" disabled={!canSubmit}>
+        <button type="submit" className={`swap-button${sameToken ? ' same-token' : ''}`} disabled={!canSubmit}>
           {submitting && <span className="spinner" />}
           {submitting ? 'Swapping' : 'Swap tokens'}
         </button>
